@@ -1,8 +1,8 @@
 name: Deploy
 
 on:
-  workflow_dispatch:   # ✅ این خط ضروری است
-  push:                # اختیاری
+  workflow_dispatch:   
+  push:                
 
 jobs:
   build:
@@ -12,4 +12,4 @@ jobs:
       - name: Unzip
         run: |
           sudo apt-get install -y unzip
-          unzip pakart-website.zip -d ./site
+          unzip pakart.zip -d ./site
