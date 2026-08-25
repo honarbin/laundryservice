@@ -1,0 +1,19 @@
+name: Deploy
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install unzip
+        run: sudo apt-get install -y unzip
+
+      - name: Unzip pakart-website
+        run: |
+          unzip pakart-website.zip -d ./public_html
+
+      - name: List extracted files
+        run: ls -la ./public_html
