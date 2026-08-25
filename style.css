@@ -1,0 +1,32 @@
+/* ========================================
+   PAK_ART | پاک‌آرت — Custom Styles
+   ======================================== */
+
+/* ----- Fonts ----- */
+body {
+  font-family: 'Vazirmatn', system-ui, sans-serif;
+  color: #1A1A1A;
+}
+
+.font-brand {
+  font-family: 'Poppins', 'Vazirmatn', system-ui, sans-serif;
+}
+
+/* ----- Hero Background ----- */
+.hero-gradient {
+  background: linear-gradient(105deg, #0A2E27 0%, #0F3D34 45%, #1A4A40 100%);
+}
+
+.hero-glow {
+  background: radial-gradient(ellipse at 50% 50%, rgba(46, 125, 102, 0.15), transparent 60%);
+}
+
+/* ----- Transitions ----- */
+.transition-soft {
+  transition: all 0.25s ease;
+}
+
+/* ----- Shadow helpers (if needed beyond Tailwind) ----- */
+.shadow-hero {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
