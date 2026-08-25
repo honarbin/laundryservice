@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PAK_ART | پاک‌آرت — تخصص در پاکیزگی</title>
+  <meta name="description" content="پاک‌آرت | خشکشویی تخصصی، لکه‌بری و تولید محصولات تخصصی نظافت و مراقبت از لباس، کفش و کیف" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#0F3D34',
+              dark: '#0A2E27',
+              medium: '#1E5A4C',
+              light: '#E6F2EF',
+              soft: '#F0F7F5'
+            },
+            cream: '#F7F4F0',
+            gold: '#C59D5F',
+            ink: '#1A1A1A',
+            muted: '#64748B'
+          },
+          fontFamily: {
+            vazir: ['Vazirmatn', 'system-ui', 'sans-serif'],
+            poppins: ['Poppins', 'Vazirmatn', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 4px 20px -4px rgba(15,61,52,0.08)',
+            card: '0 10px 40px -10px rgba(15,61,52,0.12)',
+            hero: '0 25px 50px -12px rgba(0,0,0,0.25)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-white text-ink antialiased">
+
+  <!-- ========== HEADER ========== -->
+  <header class="sticky top-0 z-50 bg-brand text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-[72px]">
+
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2.5 shrink-0">
+          <div class="w-9 h-9 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center">
+            <span class="font-brand font-bold text-[15px] tracking-tight">PA</span>
+          </div>
+          <div class="leading-tight">
+            <span class="font-brand font-bold text-lg tracking-wide block">PAK_ART</span>
+            <span class="text-[11px] text-white/65 font-medium">پاک آرت</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden lg:flex items-center gap-6 xl:gap-7 text-[13.5px] font-medium">
+          <a href="#home" class="text-white/90 hover:text-white transition">صفحه اصلی</a>
+          <a href="#services" class="text-white/90 hover:text-white transition">خدمات خشکشویی</a>
+          <a href="#products" class="text-white/90 hover:text-white transition">محصولات</a>
+          <a href="#articles" class="text-white/90 hover:text-white transition">مقالات</a>
+          <a href="#b2b" class="text-white/90 hover:text-white transition">مشتریان سازمانی</a>
+          <a href="#about" class="text-white/90 hover:text-white transition">درباره ما</a>
+          <a href="#contact" class="text-white/90 hover:text-white transition">تماس با ما</a>
+        </nav>
+
+        <!-- CTA + Mobile Button -->
+        <div class="flex items-center gap-3">
+          <a href="#contact" class="hidden sm:inline-flex items-center gap-2 bg-white text-brand font-semibold text-sm px-4 py-2.5 rounded-full hover:bg-brand-light transition shadow-sm">
+            تماس با ما
+          </a>
+          <button id="mobile-btn" class="lg:hidden p-2 rounded-lg hover:bg-white/10" aria-label="منو">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-dark border-t border-white/10">
+      <div class="px-4 py-3 space-y-0.5 text-sm font-medium">
+        <a href="#home" class="block py-2.5 px-3 rounded-lg hover:bg-white/10">صفحه اصلی</a>
+        <a href="#services" class="block py-2.5 px-3 rounded-lg hover:bg-white/10">خدمات خشکشویی</a>
+        <a href="#products" class="block py-2.5 px-3 rounded-lg hover:bg-white/10">محصولات</a>
+        <a href="#articles" class="block py-2.5 px-3 rounded-lg hover:bg-white/10">مقالات</a>
+        <a href="#b2b" class="block py-2.5 px-3 rounded-lg hover:bg-white/10">مشتریان سازمانی</a>
+        <a href="#about" class="block py-2.5 px-3 rounded-lg hover:bg-white/10">درباره ما</a>
+        <a href="#contact" class="block py-2.5 px-3 rounded-lg hover:bg-white/10">تماس با ما</a>
+        <a href="#contact" class="mt-2 flex items-center justify-center gap-2 bg-white text-brand font-semibold py-2.5 rounded-full">تماس با ما</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <!-- چیدمان: چپ = پیراهن قبل/بعد | وسط = متن | راست = محصولات -->
+  <section id="home" class="hero-gradient relative overflow-hidden">
+    <div class="absolute inset-0 hero-glow pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14 xl:py-16 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-4 xl:gap-6 items-center">
+
+        <!-- راست: محصولات -->
+        <div class="lg:col-span-4 order-3 lg:order-1 flex justify-center lg:justify-end">
+          <div class="relative w-full max-w-[260px] xl:max-w-[300px]">
+            <div class="flex items-end justify-center gap-1.5 xl:gap-2.5">
+              <img src="images/hero-product-spray.png" alt="لکه‌بر پاک‌آرت" class="h-44 xl:h-52 w-auto object-contain drop-shadow-2xl" />
+              <img src="images/hero-product-bottle.png" alt="محصول پاک‌آرت" class="h-48 xl:h-56 w-auto object-contain drop-shadow-2xl -mb-0.5" />
+              <div class="flex flex-col items-center gap-2">
+                <img src="images/hero-product-small.png" alt="اسپری پاک‌آرت" class="h-32 xl:h-36 w-auto object-contain drop-shadow-2xl" />
+                <div class="flex items-end gap-1.5">
+                  <img src="images/hero-towel.png" alt="حوله" class="w-12 h-9 object-cover rounded-md shadow-md opacity-95" />
+                </div>
+              </div>
+            </div>
+            <div class="absolute -top-1 right-2 bg-white/90 text-brand text-[10px] font-bold px-2.5 py-1 rounded-full shadow-sm tracking-wide">
+              PAK_ART
+            </div>
+          </div>
+        </div>
+
+        <!-- وسط: متن -->
+        <div class="lg:col-span-4 order-1 lg:order-2 text-white text-center">
+          <h1 class="text-2xl sm:text-3xl lg:text-[1.9rem] xl:text-[2.2rem] font-extrabold leading-[1.35] mb-4">
+            تخصص در پاکیزگی<br>
+            از لباس شما تا محصولی<br>
+            که برای پاکیزگی تولید می‌کنیم
+          </h1>
+          <p class="text-white/75 text-sm leading-relaxed mb-7 max-w-xs mx-auto">
+            خشکشویی تخصصی، لکه‌بری و مراقبت از لباس در کنار تولید محصولات تخصصی نظافت و لکه‌بری، برای منازل و مجموعه‌های حرفه‌ای
+          </p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a href="#products" class="inline-flex items-center gap-2 bg-white text-brand font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-brand-light transition shadow-sm">
+              مشاهده محصولات
+            </a>
+            <a href="#services" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold text-sm px-5 py-2.5 rounded-full border border-white/30 transition">
+              مشاهده خدمات خشکشویی
+            </a>
+          </div>
+        </div>
+
+        <!-- چپ: پیراهن قبل / بعد -->
+        <div class="lg:col-span-4 order-2 lg:order-3 flex justify-center lg:justify-start">
+          <div class="relative w-full max-w-[280px] xl:max-w-[320px]">
+            <div class="rounded-2xl overflow-hidden shadow-hero relative aspect-[3/4]">
+              <div class="absolute inset-0 flex">
+                <div class="w-1/2 relative overflow-hidden">
+                  <img src="images/hero-shirt-before.jpg" alt="پیراهن لک‌دار" class="absolute inset-0 w-[200%] h-full object-cover object-left brightness-[0.95]" />
+                  <div class="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+                </div>
+                <div class="w-1/2 relative overflow-hidden">
+                  <img src="images/hero-shirt-after.jpg" alt="پیراهن تمیز" class="absolute inset-0 h-full object-cover" style="width:200%; left:-100%; max-width:none;" />
+                </div>
+              </div>
+              <div class="absolute top-0 bottom-0 left-1/2 w-[2px] bg-white/90 z-10 -translate-x-1/2 shadow-[0_0_18px_rgba(255,255,255,0.55)]"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TRUST BAR ========== -->
+  <section class="bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-4">
+        <div class="flex flex-col items-center text-center gap-2.5">
+          <div class="w-12 h-12 rounded-full bg-brand-soft flex items-center justify-center">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+          </div>
+          <div>
+            <p class="font-semibold text-sm text-ink">تیم متخصص</p>
+            <p class="text-xs text-muted mt-0.5">متخصص در لکه‌بری و خشکشویی</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center text-center gap-2.5">
+          <div class="w-12 h-12 rounded-full bg-brand-soft flex items-center justify-center">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg>
+          </div>
+          <div>
+            <p class="font-semibold text-sm text-ink">تجهیزات پیشرفته</p>
+            <p class="text-xs text-muted mt-0.5">دقت بالا در شستشو و لکه‌بری</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center text-center gap-2.5">
+          <div class="w-12 h-12 rounded-full bg-brand-soft flex items-center justify-center">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <p class="font-semibold text-sm text-ink">کیفیت تضمین</p>
+            <p class="text-xs text-muted mt-0.5">نتیجه‌ای تمیز و بی‌نقص</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center text-center gap-2.5">
+          <div class="w-12 h-12 rounded-full bg-brand-soft flex items-center justify-center">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg>
+          </div>
+          <div>
+            <p class="font-semibold text-sm text-ink">محصولات حرفه‌ای</p>
+            <p class="text-xs text-muted mt-0.5">ساخته شده برای نتیجه بهتر</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center text-center gap-2.5 col-span-2 sm:col-span-1">
+          <div class="w-12 h-12 rounded-full bg-brand-soft flex items-center justify-center">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+          </div>
+          <div>
+            <p class="font-semibold text-sm text-ink">مشاوره تخصصی</p>
+            <p class="text-xs text-muted mt-0.5">راهنمایی برای انتخاب درست</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== احیای لباس و کفش ========== -->
+  <section id="services" class="py-14 lg:py-20 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
+        <div class="max-w-lg">
+          <h2 class="text-2xl sm:text-3xl font-bold text-ink mb-2">احیای لباس و کفش</h2>
+          <p class="text-muted text-[15px] leading-relaxed">به لباس و کفش‌های ارزشمندتان جانی دوباره می‌دهیم.</p>
+        </div>
+        <a href="#contact" class="inline-flex items-center gap-2 bg-brand hover:bg-brand-medium text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition self-start">
+          مشاهده خدمات احیا
+        </a>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-soft">
+          <div class="grid grid-cols-2 relative">
+            <div class="relative">
+              <img src="images/revival-shirt-before.jpg" alt="قبل — پیراهن" class="w-full aspect-square object-cover" />
+              <span class="absolute bottom-2 right-2 bg-black/60 text-white text-[11px] font-medium px-2 py-0.5 rounded">قبل</span>
+            </div>
+            <div class="relative">
+              <img src="images/revival-shirt-after.jpg" alt="بعد — پیراهن" class="w-full aspect-square object-cover" />
+              <span class="absolute bottom-2 left-2 bg-brand text-white text-[11px] font-medium px-2 py-0.5 rounded">بعد</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-soft">
+          <div class="grid grid-cols-2 relative">
+            <div class="relative">
+              <img src="images/revival-bag-before.jpg" alt="قبل — کیف" class="w-full aspect-square object-cover" />
+              <span class="absolute bottom-2 right-2 bg-black/60 text-white text-[11px] font-medium px-2 py-0.5 rounded">قبل</span>
+            </div>
+            <div class="relative">
+              <img src="images/revival-bag-after.jpg" alt="بعد — کیف" class="w-full aspect-square object-cover" />
+              <span class="absolute bottom-2 left-2 bg-brand text-white text-[11px] font-medium px-2 py-0.5 rounded">بعد</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-soft sm:col-span-2 lg:col-span-1">
+          <div class="grid grid-cols-2 relative">
+            <div class="relative">
+              <img src="images/revival-shoe-before.jpg" alt="قبل — کفش" class="w-full aspect-square object-cover" />
+              <span class="absolute bottom-2 right-2 bg-black/60 text-white text-[11px] font-medium px-2 py-0.5 rounded">قبل</span>
+            </div>
+            <div class="relative">
+              <img src="images/revival-shoe-after.jpg" alt="بعد — کفش" class="w-full aspect-square object-cover" />
+              <span class="absolute bottom-2 left-2 bg-brand text-white text-[11px] font-medium px-2 py-0.5 rounded">بعد</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== محصولات ========== -->
+  <section id="products" class="py-14 lg:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10 lg:mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-ink mb-2">محصولات پاک آرت</h2>
+        <p class="text-muted text-[15px]">راهکارهای تخصصی برای پاکیزگی و نظافت</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <article class="group bg-brand-soft/60 hover:bg-brand-soft rounded-2xl p-5 transition border border-transparent hover:border-brand/10">
+          <div class="aspect-square bg-white rounded-xl overflow-hidden mb-4 flex items-center justify-center p-4">
+            <img src="images/product-stain-removers.png" alt="لکه‌برها" class="max-h-full object-contain group-hover:scale-105 transition duration-500" />
+          </div>
+          <h3 class="font-semibold text-ink mb-1">لکه‌برها</h3>
+          <p class="text-xs text-muted leading-relaxed mb-3">مناسب برای انواع لکه‌های چربی، رنگ، جوهر، خون و ...</p>
+          <a href="#contact" class="inline-flex items-center gap-1 text-sm font-semibold text-brand hover:text-brand-medium">مشاهده محصولات</a>
+        </article>
+        <article class="group bg-brand-soft/60 hover:bg-brand-soft rounded-2xl p-5 transition border border-transparent hover:border-brand/10">
+          <div class="aspect-square bg-white rounded-xl overflow-hidden mb-4 flex items-center justify-center p-4">
+            <img src="images/product-drycleaning.png" alt="محصولات خشکشویی" class="max-h-full object-contain group-hover:scale-105 transition duration-500" />
+          </div>
+          <h3 class="font-semibold text-ink mb-1">محصولات خشکشویی</h3>
+          <p class="text-xs text-muted leading-relaxed mb-3">محصولات تخصصی برای خشکشویی‌ها و کارگاه‌ها</p>
+          <a href="#contact" class="inline-flex items-center gap-1 text-sm font-semibold text-brand hover:text-brand-medium">مشاهده محصولات</a>
+        </article>
+        <article class="group bg-brand-soft/60 hover:bg-brand-soft rounded-2xl p-5 transition border border-transparent hover:border-brand/10">
+          <div class="aspect-square bg-white rounded-xl overflow-hidden mb-4 flex items-center justify-center p-4">
+            <img src="images/product-hotel.png" alt="محصولات هتلی و سازمانی" class="max-h-full object-contain group-hover:scale-105 transition duration-500" />
+          </div>
+          <h3 class="font-semibold text-ink mb-1">محصولات هتلی و سازمانی</h3>
+          <p class="text-xs text-muted leading-relaxed mb-3">راهکارهای حرفه‌ای برای هتل‌ها، ادارات و مجموعه‌ها</p>
+          <a href="#contact" class="inline-flex items-center gap-1 text-sm font-semibold text-brand hover:text-brand-medium">مشاهده محصولات</a>
+        </article>
+        <article class="group bg-brand-soft/60 hover:bg-brand-soft rounded-2xl p-5 transition border border-transparent hover:border-brand/10">
+          <div class="aspect-square bg-white rounded-xl overflow-hidden mb-4 flex items-center justify-center p-4">
+            <img src="images/product-home.png" alt="محصولات مصرف خانگی" class="max-h-full object-contain group-hover:scale-105 transition duration-500" />
+          </div>
+          <h3 class="font-semibold text-ink mb-1">محصولات مصرف خانگی</h3>
+          <p class="text-xs text-muted leading-relaxed mb-3">محصولاتی کاربردی برای استفاده در نظافت در خانه</p>
+          <a href="#contact" class="inline-flex items-center gap-1 text-sm font-semibold text-brand hover:text-brand-medium">مشاهده محصولات</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== راهکار برای هر مجموعه ========== -->
+  <section id="b2b" class="py-14 lg:py-20 bg-brand-soft/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10 lg:mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-ink mb-2">راهکار پاک آرت برای هر مجموعه</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <article class="bg-white rounded-2xl overflow-hidden shadow-soft group">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="images/b2b-drycleaning.jpg" alt="خشکشویی‌ها" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-sm text-ink">خشکشویی‌ها</h3>
+            <p class="text-xs text-muted mt-1">محصولات تخصصی برای بهبود کیفیت خدمات</p>
+          </div>
+        </article>
+        <article class="bg-white rounded-2xl overflow-hidden shadow-soft group">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="images/b2b-hotel.jpg" alt="هتل‌ها" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-sm text-ink">هتل‌ها</h3>
+            <p class="text-xs text-muted mt-1">نظافت و مراقبت از منسوجات و محیط اقامتی</p>
+          </div>
+        </article>
+        <article class="bg-white rounded-2xl overflow-hidden shadow-soft group">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="images/b2b-cleaning-company.jpg" alt="مؤسسات نظافتی" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-sm text-ink">مؤسسات نظافتی</h3>
+            <p class="text-xs text-muted mt-1">محصولات حرفه‌ای برای استفاده مداوم و روزانه</p>
+          </div>
+        </article>
+        <article class="bg-white rounded-2xl overflow-hidden shadow-soft group">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="images/b2b-office.jpg" alt="سازمان‌ها و شرکت‌ها" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-sm text-ink">سازمان‌ها و شرکت‌ها</h3>
+            <p class="text-xs text-muted mt-1">راهکارهای اختصاصی متناسب با نیاز مجموعه</p>
+          </div>
+        </article>
+        <article class="bg-white rounded-2xl overflow-hidden shadow-soft group sm:col-span-2 lg:col-span-1">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="images/b2b-home.jpg" alt="منازل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-sm text-ink">منازل</h3>
+            <p class="text-xs text-muted mt-1">محصولات کاربردی برای تمیزی و مراقبت روزمره</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== مقالات ========== -->
+  <section id="articles" class="py-14 lg:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10 lg:mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-ink mb-2">مقالات و راهنمایی‌ها</h2>
+        <p class="text-muted text-[15px]">آموزش و راهکارهای کاربردی برای شستشو، لکه‌بری و مراقبت از لباس و کفش</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+        <article class="group">
+          <div class="aspect-[4/3] rounded-xl overflow-hidden mb-3">
+            <img src="images/article-1.jpg" alt="راهنمای شستشو" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <span class="text-[11px] font-medium text-brand">راهنمای شستشو</span>
+          <h3 class="font-semibold text-sm text-ink mt-1 leading-snug group-hover:text-brand transition">راهنمای شستشوی لباس‌های پشمی در خانه</h3>
+          <p class="text-[11px] text-muted mt-1.5">۲۴ اردیبهشت ۱۴۰۳</p>
+          <a href="#" class="inline-block text-xs font-semibold text-brand mt-2 hover:underline">ادامه مطلب ←</a>
+        </article>
+        <article class="group">
+          <div class="aspect-[4/3] rounded-xl overflow-hidden mb-3">
+            <img src="images/article-2.jpg" alt="لکه‌بری" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <span class="text-[11px] font-medium text-brand">لکه‌بری</span>
+          <h3 class="font-semibold text-sm text-ink mt-1 leading-snug group-hover:text-brand transition">چگونه لکه قهوه را از روی لباس پاک کنیم؟</h3>
+          <p class="text-[11px] text-muted mt-1.5">۲۲ اردیبهشت ۱۴۰۳</p>
+          <a href="#" class="inline-block text-xs font-semibold text-brand mt-2 hover:underline">ادامه مطلب ←</a>
+        </article>
+        <article class="group">
+          <div class="aspect-[4/3] rounded-xl overflow-hidden mb-3">
+            <img src="images/article-3.jpg" alt="استفاده از محصولات" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <span class="text-[11px] font-medium text-brand">استفاده از محصولات</span>
+          <h3 class="font-semibold text-sm text-ink mt-1 leading-snug group-hover:text-brand transition">نحوه استفاده صحیح از لکه‌بر همه‌منظوره پاک آرت</h3>
+          <p class="text-[11px] text-muted mt-1.5">۲۰ اردیبهشت ۱۴۰۳</p>
+          <a href="#" class="inline-block text-xs font-semibold text-brand mt-2 hover:underline">ادامه مطلب ←</a>
+        </article>
+        <article class="group">
+          <div class="aspect-[4/3] rounded-xl overflow-hidden mb-3">
+            <img src="images/article-4.jpg" alt="مراقبت از لباس" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <span class="text-[11px] font-medium text-brand">مراقبت از لباس</span>
+          <h3 class="font-semibold text-sm text-ink mt-1 leading-snug group-hover:text-brand transition">۵ نکته طلایی برای افزایش عمر لباس‌های شما</h3>
+          <p class="text-[11px] text-muted mt-1.5">۱۸ اردیبهشت ۱۴۰۳</p>
+          <a href="#" class="inline-block text-xs font-semibold text-brand mt-2 hover:underline">ادامه مطلب ←</a>
+        </article>
+        <article class="group">
+          <div class="aspect-[4/3] rounded-xl overflow-hidden mb-3">
+            <img src="images/article-5.jpg" alt="مراقبت از کفش" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <span class="text-[11px] font-medium text-brand">مراقبت از کفش</span>
+          <h3 class="font-semibold text-sm text-ink mt-1 leading-snug group-hover:text-brand transition">روش صحیح تمیز کردن کفش‌های سفید و پارچه‌ای</h3>
+          <p class="text-[11px] text-muted mt-1.5">۱۶ اردیبهشت ۱۴۰۳</p>
+          <a href="#" class="inline-block text-xs font-semibold text-brand mt-2 hover:underline">ادامه مطلب ←</a>
+        </article>
+      </div>
+      <div class="text-center mt-10">
+        <a href="#" class="inline-flex items-center gap-2 bg-brand hover:bg-brand-medium text-white font-semibold text-sm px-6 py-3 rounded-xl transition">مشاهده همه مقالات</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA نهایی ========== -->
+  <section id="contact" class="bg-brand py-12 lg:py-14">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-xl sm:text-2xl font-bold text-white mb-2">برای خدمات خشکشویی یا خرید محصولات نیاز دارید؟</h2>
+      <p class="text-white/75 text-sm mb-7">کارشناسان پاک آرت آماده پاسخگویی به شما هستند.</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="tel:+982112345678" class="inline-flex items-center gap-2 bg-white text-brand font-semibold text-sm px-6 py-3 rounded-xl hover:bg-brand-light transition">تماس با ما</a>
+        <a href="#products" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold text-sm px-6 py-3 rounded-xl border border-white/25 transition">مشاهده محصولات</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-brand-dark text-white pt-14 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="flex items-center gap-2.5 mb-4">
+            <div class="w-9 h-9 rounded-lg bg-white/10 border border-white/15 flex items-center justify-center">
+              <span class="font-brand font-bold text-[15px]">PA</span>
+            </div>
+            <div>
+              <span class="font-brand font-bold text-lg tracking-wide block">PAK_ART</span>
+              <span class="text-[11px] text-white/55">پاک آرت</span>
+            </div>
+          </div>
+          <p class="text-sm text-white/65 leading-relaxed">تخصص در پاکیزگی، لکه‌بری و مراقبت از لباس و تولید محصولات تخصصی نظافت برای منازل و مجموعه‌های حرفه‌ای.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm mb-4">خدمات ما</h4>
+          <ul class="space-y-2.5 text-sm text-white/65">
+            <li><a href="#services" class="hover:text-white transition">خشکشویی تخصصی</a></li>
+            <li><a href="#services" class="hover:text-white transition">لکه‌بری</a></li>
+            <li><a href="#services" class="hover:text-white transition">احیای لباس و کفش</a></li>
+            <li><a href="#services" class="hover:text-white transition">شستشوی منسوجات</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm mb-4">دسترسی سریع</h4>
+          <ul class="space-y-2.5 text-sm text-white/65">
+            <li><a href="#home" class="hover:text-white transition">صفحه اصلی</a></li>
+            <li><a href="#services" class="hover:text-white transition">خدمات خشکشویی</a></li>
+            <li><a href="#products" class="hover:text-white transition">محصولات</a></li>
+            <li><a href="#articles" class="hover:text-white transition">مقالات</a></li>
+            <li><a href="#contact" class="hover:text-white transition">تماس با ما</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm mb-4">تماس با ما</h4>
+          <ul class="space-y-2.5 text-sm text-white/65">
+            <li>۰۲۱-۱۲۳۴۵۶۷۸</li>
+            <li>۰۹۱۲-۱۲۳۴۵۶۷</li>
+            <li>info@pakart.ir</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-white/40">
+        <p>© ۱۴۰۴ پاک‌آرت. تمامی حقوق محفوظ است.</p>
+        <p class="font-brand tracking-wide">PAK_ART</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('mobile-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+  </script>
+</body>
+</html>
