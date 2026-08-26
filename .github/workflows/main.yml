@@ -31,19 +31,21 @@ jobs:
           mkdir extracted
           unzip -o pakart.zip -d extracted
 
-      - name: Copy website to root
+      - name: Show extracted files
         run: |
-          echo "Contents of ZIP:"
+          echo "===== Contents of ZIP ====="
           find extracted -type f
 
-          cp -R extracted/site/. .
+      - name: Copy files to repository root
+        run: |
+          cp -R extracted/. .
 
-      - name: Remove ZIP and temporary files
+      - name: Remove ZIP and temporary folder
         run: |
           rm -rf extracted
           rm -f pakart.zip
 
-      - name: Check files
+      - name: Show final files
         run: |
           echo "===== FINAL FILES ====="
           find . -maxdepth 3 -type f \
@@ -54,12 +56,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          echo "===== GIT STATUS BEFORE COMMIT ====="
+          echo "===== GIT STATUS ====="
           git status
 
           git add -A
 
-          echo "===== GIT STATUS AFTER ADD ====="
+          echo "===== STAGED FILES ====="
           git status
 
           if git diff --cached --quiet; then
